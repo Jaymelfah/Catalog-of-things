@@ -1,6 +1,6 @@
 require_relative './src/app'
-require_relative './src/prompt_user.rb'
-require_relative './src/menu.rb'
+require_relative './src/prompt_user'
+require_relative './src/menu'
 
 def main
   app = App.new

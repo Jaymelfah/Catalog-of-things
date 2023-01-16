@@ -1,6 +1,6 @@
-require_relative './app.rb'
-require_relative './options.rb'
-require_relative './menu.rb'
+require_relative './app'
+require_relative './options'
+require_relative './menu'
 class PromptUser
   def prompt_user(app)
     Menu.new.display_menu
@@ -9,5 +9,4 @@ class PromptUser
     Options.new.option_case(app, options)
     prompt_user(app)
   end
-  
 end
