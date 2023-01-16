@@ -1,0 +1,22 @@
+[
+  {
+    "genre_id" : "99424e8d47842b",
+    "name" : "Comedy",
+    "items" : [
+      {
+        "on_spotify" : true,
+        "publish_date" : "2020-02-02"
+      }
+    ]
+  },
+  {
+    "genre_id" : "9d7a9e9a4cbce2",
+    "name" : "Afrobeats",
+    "items" : [
+      {
+        "on_spotify" : true,
+        "publish_date" : "2021-04-01"
+      }
+    ]
+  }
+]

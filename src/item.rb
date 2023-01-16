@@ -2,7 +2,7 @@ require 'securerandom'
 require 'date'
 
 class Item
-  attr_reader :id, :publish_date, :archived
+  attr_reader :id, :publish_date, :archived, :genre
 
   def initialize(publish_date, archived: false)
     @id = SecureRandom.hex(7)
@@ -10,9 +10,9 @@ class Item
     @archived = archived
   end
 
-  def genre(genre)
+  def add_genre(genre)
     @genre = genre
-    genre.items << self unless genre.items.include?(self)
+    genre.add_item(self) unless genre.items.include?(self)
   end
 
   def author(author)
