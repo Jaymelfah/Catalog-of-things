@@ -2,8 +2,6 @@ require_relative './label'
 require_relative './module_methods/music_genre'
 require_relative './music_album'
 require_relative './genre'
-
-
 class App
   include MusicGenreModule
 
