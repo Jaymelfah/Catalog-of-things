@@ -34,14 +34,13 @@ class App
   end
 
   def add_author
-    #Author Properties
+    # Author Properties
   end
 
   def add_genre(thing)
-    #thing can be Book, music or game
-    #genre Properties
+    # thing can be Book, music or game
+    # genre Properties
   end
-
 
   def add_book
     label = add_label('Book')
@@ -71,7 +70,6 @@ class App
   def add_game
     puts 'Game Added'
   end
-
 
   def quit_app
     exit
