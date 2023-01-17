@@ -2,6 +2,7 @@ require_relative './label'
 require_relative './module_methods/music_genre'
 require_relative './music_album'
 require_relative './genre'
+require_relative './books'
 class App
   include MusicGenreModule
 
@@ -47,15 +48,11 @@ class App
     # Author Properties
   end
 
-  def add_genre(thing)
-    # thing can be Book, music or game
-    # genre Properties
-  end
-
   def add_book
     label = add_label('Book')
     author = add_author
-    genre = add_genre('book')
+    genre = add_genre
+    puts 'Genre is', genre
     print 'What\'s the state of the Book Cover? [good/bad]: '
     cover_state = gets.chomp.downcase
     print 'Insert Book Publisher? '
