@@ -1,7 +1,7 @@
+require_relative './label'
 require_relative './module_methods/music_genre'
 require_relative './music_album'
 require_relative './genre'
-
 class App
   include MusicGenreModule
 
@@ -35,8 +35,42 @@ class App
     puts 'Author Listed'
   end
 
+  def add_label(thing)
+    print "Title of the #{thing}: "
+    title = gets.chomp
+    print "Color of the #{thing}: "
+    color = gets.chomp
+    Label.new(title, color)
+  end
+
+  def add_author
+    # Author Properties
+  end
+
+  def add_genre(thing)
+    # thing can be Book, music or game
+    # genre Properties
+  end
+
   def add_book
-    puts 'Book Added'
+    label = add_label('Book')
+    author = add_author
+    genre = add_genre('book')
+    print 'What\'s the state of the Book Cover? [good/bad]: '
+    cover_state = gets.chomp.downcase
+    print 'Insert Book Publisher? '
+    publisher = gets.chomp
+    print 'Insert Publishing date? [year/month/day] (e.g 1937/11/12): '
+    published_date = gets.chomp
+    book = Book.new(publisher, cover_state, published_date)
+    label.add_item(book)
+    genre.add_item(book)
+    author.add_item(book)
+    @books << book
+    @labels << label
+    @genres << genre
+    @authors << author
+    puts "\n The book '#{label.title}' by #{author.first_name} #{author.last_name} was created successfully!✅ "
   end
 
   def add_music_album
