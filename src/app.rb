@@ -1,10 +1,22 @@
+require_relative './module_methods/music_genre'
+require_relative './music_album'
+require_relative './genre'
+
 class App
+  include MusicGenreModule
+
+  def initialize
+    @music_albums = []
+    @genres = []
+    show_genres
+  end
+
   def list_all_books
     puts 'books Listed'
   end
 
   def list_all_music_albums
-    puts 'Music Album Listed'
+    list_all_music_albums_music_module
   end
 
   def list_all_games
@@ -12,7 +24,7 @@ class App
   end
 
   def list_all_genres
-    puts 'Genre Listed'
+    list_all_genres_music_module
   end
 
   def list_all_labels
@@ -28,7 +40,7 @@ class App
   end
 
   def add_music_album
-    puts 'music Added'
+    add_music_album_music_module
   end
 
   def add_game
