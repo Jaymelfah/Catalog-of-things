@@ -12,10 +12,10 @@ module MusicGenreModule
   end
 
   def add_existing_genre
-    list_genres
-    puts 'Select ID of genre: '
-    id = gets.chomp.to_i
-    @genres.find { |item| item.id == id }
+    list_all_genres_music_module
+    puts 'Select index of genre: '
+    index = gets.chomp.to_i
+    @genres[index]
   end
 
   def create_new_music
