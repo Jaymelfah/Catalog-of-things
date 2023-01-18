@@ -36,7 +36,7 @@ module LabelModule
       }
     end
     return if labels.empty?
-    store_data(label, './src/data/labels.json')
+    update_data(label, './src/data/labels.json')
   end
 
   def get_labels
