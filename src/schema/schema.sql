@@ -19,7 +19,16 @@ CREATE TABLE labels (
 
 
 -- Books
-
+CREATE TABLE books (
+  id BIGSERIAL NOT NULL PRIMARY KEY,
+  publisher VARCHAR(150) NOT NULL,
+  cover_state VARCHAR(150) NOT NULL,
+  genre_id INT NULL REFERENCES genres(id) ON DELETE CASCADE,
+  author_id INT NULL REFERENCES authors(id) ON DELETE CASCADE,
+  label_id INT NULL REFERENCES labels(id) ON DELETE CASCADE,
+  publish_date DATE NOT NULL,
+  archived BOOLEAN NOT NULL
+);
 
 -- Music-Album
 
@@ -29,4 +38,3 @@ CREATE TABLE labels (
 
 
 -- Performance indexing
-CREATE INDEX book_label_id ON books(label_id);
