@@ -1,0 +1,26 @@
+[
+  {
+    "publish_date" : "1989/10/23",
+    "cover_state" : "good",
+    "publisher" : "Oxford Publishing Press",
+    "id" : "179594ec89baaf",
+    "label" : {
+      "title" : "Animal Farm",
+      "color" : "blue",
+      "id" : {
+        "id" : "fc3d9944c4d6ba"
+      }
+    }
+  },
+  {
+    "publish_date" : "1982/02/03",
+    "cover_state" : "good",
+    "publisher" : "Penguin",
+    "id" : "0f3c3e8ca3b0ad",
+    "label" : {
+      "title" : "The Huckleberry Finn",
+      "color" : "Yellow",
+      "id" : "03759390c45d53"
+    }
+  }
+]
