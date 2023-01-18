@@ -13,6 +13,10 @@ CREATE TABLE labels (
 );
 
 -- Genres
+CREATE TABLE genre(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
 
 
 -- Authors
@@ -31,7 +35,18 @@ CREATE TABLE books (
 );
 
 -- Music-Album
-
+CREATE TABLE music_album(
+    id SERIAL PRIMARY KEY,
+    genre_id INTEGER,
+    author_id INTEGER,
+    label_id INTEGER,
+    publish_date DATE,
+    archived BOOLEAN,
+    on_spotify BOOLEAN,
+    FOREIGN KEY (genre_id) REFERENCES genre(id),
+    FOREIGN KEY (author_id) REFERENCES author(id),
+    FOREIGN KEY (label_id) REFERENCES label(id),
+);
 
 -- Games
 
@@ -39,3 +54,8 @@ CREATE TABLE books (
 
 -- Performance indexing
 CREATE INDEX book_label_id ON books(label_id);
+
+
+
+
+
