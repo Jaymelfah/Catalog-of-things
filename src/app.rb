@@ -57,7 +57,7 @@ class App
 
   def add_book
     label = add_label('Book')
-    author = add_author
+    # author = add_author
     # genre = add_genre
     print 'Book Cover Status - [good/bad]: '
     cover_state = gets.chomp.downcase
