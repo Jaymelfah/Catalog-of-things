@@ -18,5 +18,15 @@ describe "Label Class:" do
     end
   end
 
-  
+  context 'Add Book to a Label #add_item Method' do
+    it 'can use #add_item method' do
+      expect(@label).to respond_to(:add_item)
+    end
+    it 'can add an item, items array length increases' do
+      expect(@label.items.count).to eq 0
+      @label.add_item(@book1)
+      @label.add_item(@book2)
+      expect(@label.items.count).to eq 2
+    end
+  end
 end
