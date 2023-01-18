@@ -38,3 +38,4 @@ CREATE TABLE books (
 
 
 -- Performance indexing
+CREATE INDEX book_label_id ON books(label_id);
