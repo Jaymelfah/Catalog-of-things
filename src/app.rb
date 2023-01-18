@@ -14,9 +14,8 @@ class App
     # @music_albums = []
     @genres = []
     show_genres
-    @books = get_books
-    @labels = get_labels
-
+    @books = read_books
+    @labels = read_labels
   end
 
   def list_all_books
@@ -74,12 +73,11 @@ class App
     @labels << label
     # @genres << genre
     # @authors << author
- 
+
     store_books(@books)
     # puts "\n The book '#{label.title}' by #{author.first_name} #{author.last_name} was added successfully!✅ "
-    puts "book created successfully✅"
+    puts 'book created successfully✅'
   end
-
 
   def add_music_album
     add_music_album_music_module

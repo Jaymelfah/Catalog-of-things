@@ -1,4 +1,4 @@
-require_relative '../label.rb'
+require_relative '../label'
 require_relative '../storage_helper_methods/storage'
 
 module LabelModule
@@ -36,10 +36,11 @@ module LabelModule
       }
     end
     return if labels.empty?
+
     update_data(label, './src/data/labels.json')
   end
 
-  def get_labels
+  def read_labels
     labels = []
     data = get_data('./src/data/labels.json')
     data.each do |label|

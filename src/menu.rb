@@ -29,8 +29,8 @@ class Menu
       ::: ##:::: ##:::: ##:'####: ##::. ##:. ######:::. ######::
       :::..:::::..:::::..::....::..::::..:::......:::::......:::
       ----------BOOKS - GAMES - MUSIC_ALBUM - MOVIES------------
-    
-    
+
+
              Please choose an option by entering a number:
     "
     puts "\n", @options

@@ -1,12 +1,11 @@
 require_relative '../books'
-require_relative '../label.rb'
-require_relative '../genre.rb'
-require_relative './label.rb'
-require_relative './music_genre.rb'
+require_relative '../label'
+require_relative '../genre'
+require_relative './label'
+require_relative './music_genre'
 require_relative '../storage_helper_methods/storage'
 
 module BookModule
-
   include Storage
   include LabelModule
   include MusicGenreModule
@@ -20,7 +19,7 @@ module BookModule
 
       books.each_with_index do |book, index|
         puts "#{index + 1}) Title: '#{book.label.title}'",
-            #  "   Author: #{book.author.first_name}, #{book.author.last_name} ",
+             #  "   Author: #{book.author.first_name}, #{book.author.last_name} ",
              "   Publisher: #{book.publisher}",
              "   Cover State: #{book.cover_state}"
       end
@@ -39,7 +38,7 @@ module BookModule
           title: book.label.title,
           color: book.label.color,
           id: book.label.id
-        },
+        }
         # author: {
         #   first_name: book.author.first_name,
         #   last_name: book.author.last_name,
@@ -52,12 +51,13 @@ module BookModule
       }
     end
     return if books_array.empty?
+
     update_data(books_array, './src/data/books.json')
   end
 
-  def get_books
+  def read_books
     books = []
-    data = get_data('./src/data/books.json') 
+    data = get_data('./src/data/books.json')
     data.each do |book|
       new_book = Book.new(book['publisher'], book['cover_state'], book['publish_date'], book['id'])
       label = Label.new(book['label']['title'], book['label']['color'], id: book['label']['id'])
