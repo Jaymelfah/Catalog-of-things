@@ -15,7 +15,7 @@ module Storage
   end
 
   def get_data(file_path)
-    return unless File.exist?(file_path)
+    return [] unless File.exist?(file_path)
 
     file = File.read(file_path)
     JSON.parse(file)
