@@ -52,7 +52,7 @@ module BookModule
       }
     end
     return if books_array.empty?
-    store_data(books_array, './src/data/books.json')
+    update_data(books_array, './src/data/books.json')
   end
 
   def get_books
