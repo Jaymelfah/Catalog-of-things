@@ -1,6 +1,6 @@
 [
   {
-    "genre_id" : "f889f26baa28f7",
+    "genre_id" : "269ea7a7551cef",
     "name" : "Comedy",
     "items" : [
       {
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "genre_id" : "0a84191d68715c",
+    "genre_id" : "6a0cf8bd2f8550",
     "name" : "Afrobeats",
     "items" : [
       {
@@ -24,12 +24,22 @@
     ]
   },
   {
-    "genre_id" : "76f0784aa66aad",
+    "genre_id" : "6c9544f66c9667",
     "name" : "Soul",
     "items" : [
       {
         "on_spotify" : false,
         "publish_date" : "2020-01-01"
+      }
+    ]
+  },
+  {
+    "genre_id" : "aad85684eb167e",
+    "name" : "hiphop",
+    "items" : [
+      {
+        "on_spotify" : null,
+        "publish_date" : "2023-1-1"
       }
     ]
   }
