@@ -27,6 +27,7 @@ class Options
     when 6
       app.list_all_authors
     end
+    clear_console
   end
 
   def add_options(app, option)
@@ -38,5 +39,12 @@ class Options
     when 9
       app.add_game
     end
+    clear_console
+  end
+
+  def clear_console
+    puts "\nPress [enter] to Continue..."
+    $stdin.gets
+    system('clear') || system('cls')
   end
 end
