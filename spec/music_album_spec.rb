@@ -1,4 +1,4 @@
-require_relative '../music_album'
+require_relative '../src/music_album'
 
 describe 'tests for music album class"' do
   context 'Given an instance of the music album class' do

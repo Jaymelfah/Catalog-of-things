@@ -1,5 +1,5 @@
-require_relative '../genre'
-require_relative '../music_album'
+require_relative '../src/genre'
+require_relative '../src/music_album'
 
 describe 'tests for genre class"' do
   context 'Given an instance of the genre class' do
