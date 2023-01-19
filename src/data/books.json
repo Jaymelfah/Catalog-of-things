@@ -1,26 +1,34 @@
 [
   {
-    "publish_date" : "1989/10/23",
-    "cover_state" : "good",
-    "publisher" : "Oxford Publishing Press",
-    "id" : "179594ec89baaf",
+    "publish_date" : "1988/12/04",
+    "cover_state" : "bad",
+    "publisher" : "Francaise Intl",
+    "id" : "2fd84916dcd440",
     "label" : {
       "title" : "Animal Farm",
-      "color" : "blue",
-      "id" : {
-        "id" : "fc3d9944c4d6ba"
-      }
+      "color" : "green",
+      "id" : "dbed352cd15299"
+    },
+    "author" : {
+      "first_name" : "George",
+      "last_name" : "Orwell",
+      "id" : "d00218e957080f"
     }
   },
   {
-    "publish_date" : "1982/02/03",
+    "publish_date" : "1990/8/20",
     "cover_state" : "good",
-    "publisher" : "Penguin",
-    "id" : "0f3c3e8ca3b0ad",
+    "publisher" : "Macmillan",
+    "id" : "4d8709cb73d126",
     "label" : {
-      "title" : "The Huckleberry Finn",
-      "color" : "Yellow",
-      "id" : "03759390c45d53"
+      "title" : "Silas Mannar",
+      "color" : "White",
+      "id" : "6aff45b739ec27"
+    },
+    "author" : {
+      "first_name" : "Rowan",
+      "last_name" : "Atkinson",
+      "id" : "6e569d2a059e4f"
     }
   }
 ]

@@ -1,7 +1,12 @@
 [
   {
-    "title" : "The Huckleberry Finn",
-    "color" : "Yellow",
-    "id" : "03759390c45d53"
+    "title" : "Animal Farm",
+    "color" : "green",
+    "id" : "dbed352cd15299"
+  },
+  {
+    "title" : "Silas Mannar",
+    "color" : "White",
+    "id" : "6aff45b739ec27"
   }
 ]
