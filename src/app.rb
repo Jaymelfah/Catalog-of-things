@@ -5,8 +5,13 @@ require_relative './module_methods/label'
 require_relative './music_album'
 require_relative './genre'
 require_relative './books'
+require_relative './author'
+require_relative './game'
+require_relative './module_methods/game_data'
+
 class App
   include MusicGenreModule
+  include GameData
   include LabelModule
   include BookModule
 
@@ -14,6 +19,8 @@ class App
     @music_albums = []
     @genres = []
     show_genres
+    @authors = []
+    @games = read_game
     @books = read_books
     @labels = read_labels
   end
@@ -27,7 +34,14 @@ class App
   end
 
   def list_all_games
-    puts 'games Listed'
+    if @games.empty?
+      puts 'No recorded games yet!'
+      puts
+    else
+      @games.each do |game|
+        puts "Multiplayer: #{game['multiplayer']}, Last Played Date: #{game['last_played_at']}"
+      end
+    end
   end
 
   def list_all_genres
@@ -39,11 +53,25 @@ class App
   end
 
   def list_all_authors
-    puts 'Author Listed'
+    if @authors.empty?
+      puts 'You have No recorded authors yet! '
+      puts
+    else
+      @authors.each do |author|
+        puts "First Name: #{author.first_name}, Last Name: #{author.last_name}"
+      end
+    end
   end
 
   def add_author
-    # Author Properties
+    puts 'Enter Author\'s Id:'
+    id = gets.chomp
+    puts 'Enter Author\'s First Name:'
+    first_name = gets.chomp
+    puts 'Enter Author\'s Last Name:'
+    last_name = gets.chomp
+    author = Author.new(id, first_name, last_name)
+    @authors << author
   end
 
   def add_book
@@ -75,7 +103,17 @@ class App
   end
 
   def add_game
-    puts 'Game Added'
+    puts 'Enter Multiplayer:'
+    multiplayer = gets.chomp
+    puts 'Enter last played date:'
+    last_played_date = gets.chomp
+    game = Game.new(multiplayer, last_played_date)
+    @games << {
+      multiplayer: game.multiplayer,
+      last_played_at: game.last_played_at
+    }
+    puts 'Game Recorded!'
+    write_game(@games)
   end
 
   def quit_app
