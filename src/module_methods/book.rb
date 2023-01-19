@@ -38,12 +38,12 @@ module BookModule
           title: book.label.title,
           color: book.label.color,
           id: book.label.id
-        }
-        # author: {
-        #   first_name: book.author.first_name,
-        #   last_name: book.author.last_name,
-        #   id: book.author.id
-        # },
+        },
+        author: {
+          first_name: book.author.first_name,
+          last_name: book.author.last_name,
+          id: book.author.id
+        },
         # genre: {
         #   name: book.genre.name,
         #   id: book.genre.id
