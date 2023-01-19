@@ -26,33 +26,33 @@ module BookModule
     end
   end
 
-  def store_books(books)
+  def store_books(data)
     books_array = []
-    books.each do |book|
-      books_array << {
-        publish_date: book.publish_date,
-        cover_state: book.cover_state,
-        publisher: book.publisher,
-        id: book.id,
-        label: {
-          title: book.label.title,
-          color: book.label.color,
-          id: book.label.id
-        },
-        author: {
-          first_name: book.author.first_name,
-          last_name: book.author.last_name,
-          id: book.author.id
-        }
-        # genre: {
-        #   name: book.genre.name,
-        #   id: book.genre.id
-        # }
-      }
+    data.each do |book|
+      books_array << make_book(book)
     end
     return if books_array.empty?
 
     update_data(books_array, './src/data/books.json')
+  end
+
+  def make_book(book)
+    {
+      publish_date: book.publish_date,
+      cover_state: book.cover_state,
+      publisher: book.publisher,
+      id: book.id,
+      label: {
+        title: book.label.title,
+        color: book.label.color,
+        id: book.label.id
+      },
+      author: {
+        first_name: book.author.first_name,
+        last_name: book.author.last_name,
+        id: book.author.id
+      }
+    }
   end
 
   def read_books
@@ -61,11 +61,10 @@ module BookModule
     data.each do |book|
       new_book = Book.new(book['publisher'], book['cover_state'], book['publish_date'], book['id'])
       label = Label.new(book['label']['title'], book['label']['color'], id: book['label']['id'])
-      # genre = Genre.new(book['genre']['name'], id: book['genre']['id'])
-      # author = Author.new(book['author']['first_name'], book['author']['last_name'],id: book['author']['id'])
+      author = Author.new(book['author']['first_name'], book['author']['last_name'], book['author']['id'])
       new_book.label = label
       # new_book.genre = genre
-      # new_book.author = author
+      new_book.author = author
       books << new_book
     end
     books

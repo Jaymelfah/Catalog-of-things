@@ -16,16 +16,16 @@ module LabelModule
     end
   end
 
-  def store_label(labels)
+  def store_label(data)
     label = []
-    labels.each do |item|
+    data.each do |item|
       label << {
         title: item.title,
         color: item.color,
         id: item.id
       }
     end
-    return if labels.empty?
+    return if data.empty?
 
     update_data(label, './src/data/labels.json')
   end
