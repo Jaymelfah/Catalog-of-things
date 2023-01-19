@@ -8,18 +8,20 @@ require_relative './books'
 require_relative './author'
 require_relative './game'
 require_relative './module_methods/game_data'
+require_relative './module_methods/author'
 
 class App
   include MusicGenreModule
   include GameData
   include LabelModule
   include BookModule
+  include AuthorModule
 
   def initialize
     @music_albums = []
     @genres = []
     show_genres
-    @authors = []
+    @authors = read_authors
     @games = read_game
     @books = read_books
     @labels = read_labels
@@ -64,19 +66,30 @@ class App
   end
 
   def add_author
-    puts 'Enter Author\'s Id:'
-    id = gets.chomp
     puts 'Enter Author\'s First Name:'
     first_name = gets.chomp
     puts 'Enter Author\'s Last Name:'
     last_name = gets.chomp
-    author = Author.new(id, first_name, last_name)
+    author = Author.new(first_name, last_name)
     @authors << author
+    store_author(@authors)
+    author
+  end
+
+  def add_label(thing)
+    print "#{thing} Title: "
+    title = gets.chomp
+    print "#{thing} Color: "
+    color = gets.chomp
+    label = Label.new(title, color)
+    @labels << label
+    store_label(@labels)
+    label
   end
 
   def add_book
     label = add_label('Book')
-    # author = add_author
+    author = add_author
     # genre = add_genre
     print 'Book Cover Status - [good/bad]: '
     cover_state = gets.chomp.downcase
@@ -87,12 +100,11 @@ class App
     book = Book.new(publisher, cover_state, published_date)
     label.add_item(book)
     # genre.add_item(book)
-    # author.add_item(book)
+    author.add_item(book)
 
     @books << book
-    @labels << label
+    # @labels << label
     # @genres << genre
-    # @authors << author
 
     store_books(@books)
     puts "\n The book '#{label.title}' was created successfully!✅ "
