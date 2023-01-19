@@ -1,8 +1,10 @@
+require 'securerandom'
+
 class Author
   attr_accessor :items
   attr_reader :first_name, :last_name
 
-  def initialize(id, first_name, last_name)
+  def initialize(first_name, last_name, id: SecureRandom.hex(7))
     @id = id
     @first_name = first_name
     @last_name = last_name
