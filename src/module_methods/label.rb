@@ -4,16 +4,6 @@ require_relative '../storage_helper_methods/storage'
 module LabelModule
   include Storage
 
-  def add_label(thing)
-    print "#{thing} Title: "
-    title = gets.chomp
-    print "#{thing} Color: "
-    color = gets.chomp
-    label = Label.new(title, color)
-    store_label([label])
-    label
-  end
-
   def list_labels(labels)
     if labels.empty?
       puts 'Your label list is empty'
@@ -44,7 +34,7 @@ module LabelModule
     labels = []
     data = get_data('./src/data/labels.json')
     data.each do |label|
-      label = Label.new(label['title'], label['color'], id: label['id'])
+      label = Label.new(label['title'], label['color'], label['id'])
       labels << label
     end
     labels
