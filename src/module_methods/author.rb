@@ -10,7 +10,7 @@ module AuthorModule
       author << {
         id: item.id,
         first_name: item.first_name,
-        last_name: item.last_name,
+        last_name: item.last_name
       }
     end
     return if authors.empty?
