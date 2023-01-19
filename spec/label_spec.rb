@@ -1,6 +1,6 @@
 require_relative '../src/label'
 
-describe "Label Class:" do
+describe 'Label Class:' do
   before :each do
     @label = Label.new('Animal Farm', 'whitesmoke')
     @book1 = Book.new('Macmillan.', 'bad', '1983/01/23')
