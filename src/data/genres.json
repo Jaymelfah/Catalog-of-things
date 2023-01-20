@@ -1,7 +1,7 @@
 [
   {
-    "genre_id" : "78072b82ae9272",
-    "name" : "Comedy",
+    "genre_id" : "508118a0e2dcdd",
+    "name" : "Raggae",
     "items" : [
       {
         "on_spotify" : true,
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "genre_id" : "1784c1ebe17dc9",
+    "genre_id" : "16bfaeae0cfe59",
     "name" : "Afrobeats",
     "items" : [
       {
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "genre_id" : "ab6b80f4c7be2e",
+    "genre_id" : "7b0fc6fa9ee91e",
     "name" : "Soul",
     "items" : [
       {
@@ -34,26 +34,38 @@
       {
         "on_spotify" : false,
         "publish_date" : "1992-02-02"
+      },
+      {
+        "on_spotify" : true,
+        "publish_date" : "2020-01-05"
       }
     ]
   },
   {
-    "genre_id" : "54df471c506ba1",
+    "genre_id" : "a14d83531d5246",
     "name" : "Indie Pop",
     "items" : [
       {
         "on_spotify" : true,
         "publish_date" : "2014-06-08"
+      },
+      {
+        "on_spotify" : true,
+        "publish_date" : "1958-01-01"
       }
     ]
   },
   {
-    "genre_id" : "aad85684eb167e",
+    "genre_id" : "a10e3364a4da29",
     "name" : "hiphop",
     "items" : [
       {
         "on_spotify" : null,
         "publish_date" : "2023-1-1"
+      },
+      {
+        "on_spotify" : false,
+        "publish_date" : "2011-01-02"
       }
     ]
   }
