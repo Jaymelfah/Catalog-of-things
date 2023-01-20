@@ -20,7 +20,7 @@ module AuthorModule
 
   def read_authors
     authors = []
-    data = get_data('./src/data/authors.json')
+    data = get_data('./src/data/author.json')
     data.each do |item|
       author = Author.new(item['first_name'], item['last_name'], item['id'])
       authors << author
