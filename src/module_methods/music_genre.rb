@@ -29,7 +29,6 @@ module MusicGenreModule
     end
     puts 'Please type the publishing date of the music album(yyyy-mm-dd): '
     publish_date = gets.chomp
-    puts on_spotify
     MusicAlbum.new(on_spotify, publish_date)
   end
 
