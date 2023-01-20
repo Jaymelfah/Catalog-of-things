@@ -90,7 +90,6 @@ class App
   def add_book
     label = add_label('Book')
     author = add_author
-    # genre = add_genre
     print 'Book Cover Status - [good/bad]: '
     cover_state = gets.chomp.downcase
     print 'Book Publisher: '
@@ -99,13 +98,8 @@ class App
     published_date = gets.chomp
     book = Book.new(publisher, cover_state, published_date)
     label.add_item(book)
-    # genre.add_item(book)
     author.add_item(book)
-
     @books << book
-    # @labels << label
-    # @genres << genre
-
     store_books(@books)
     puts "\n The book '#{label.title}' was created successfully!✅ "
   end

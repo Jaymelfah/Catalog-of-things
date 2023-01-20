@@ -2,7 +2,6 @@ require 'json'
 
 module Storage
   def update_data(array, file_path)
-    # File.new(file_path, 'w+') unless File.exist?(file_path)
     opts = {
       array_nl: "\n",
       object_nl: "\n",

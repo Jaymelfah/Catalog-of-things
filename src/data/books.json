@@ -7,7 +7,9 @@
     "label" : {
       "title" : "Animal Farm",
       "color" : "green",
-      "id" : "dbed352cd15299"
+      "id" : {
+        "id" : "dbed352cd15299"
+      }
     },
     "author" : {
       "first_name" : "George",
@@ -23,12 +25,30 @@
     "label" : {
       "title" : "Silas Mannar",
       "color" : "White",
-      "id" : "6aff45b739ec27"
+      "id" : {
+        "id" : "6aff45b739ec27"
+      }
     },
     "author" : {
       "first_name" : "Rowan",
       "last_name" : "Atkinson",
       "id" : "6e569d2a059e4f"
+    }
+  },
+  {
+    "publish_date" : "2020-1-1",
+    "cover_state" : "good",
+    "publisher" : "emegua",
+    "id" : "b6148edf8255ca",
+    "label" : {
+      "title" : "Zamra",
+      "color" : "red",
+      "id" : "cb8707ef3dda51"
+    },
+    "author" : {
+      "first_name" : "Yismake",
+      "last_name" : "Worku",
+      "id" : "ef637424a866cb"
     }
   }
 ]

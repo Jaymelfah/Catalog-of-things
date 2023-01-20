@@ -19,7 +19,6 @@ module BookModule
 
       books.each_with_index do |book, index|
         puts "#{index + 1}) Title: '#{book.label.title}'",
-             #  "   Author: #{book.author.first_name}, #{book.author.last_name} ",
              "   Publisher: #{book.publisher}",
              "   Cover State: #{book.cover_state}"
       end
@@ -63,7 +62,6 @@ module BookModule
       label = Label.new(book['label']['title'], book['label']['color'], id: book['label']['id'])
       author = Author.new(book['author']['first_name'], book['author']['last_name'], book['author']['id'])
       new_book.label = label
-      # new_book.genre = genre
       new_book.author = author
       books << new_book
     end
