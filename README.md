@@ -51,7 +51,7 @@ Everything is based on the UML class diagram presented below. The data is be sto
 ![Preview](/images/catalog_of_my_things.png)
 
 ### Demo Video <a name="video">
-Kindly watch the demo [here]()
+Kindly watch the demo [here](https://drive.google.com/file/d/1bz6MQGKx3tYrVxGJapq1a-rIY0Q03nmM/view?usp=share_link)
 
 
 <!-- GETTING STARTED -->
