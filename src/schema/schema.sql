@@ -20,6 +20,11 @@ CREATE TABLE genre(
 
 
 -- Authors
+CREATE TABLE author(
+  id SERIAL NOT NULL PRIMARY KEY,
+  first_name VARCHAR
+  last_name VARCHAR
+);
 
 
 -- Books
@@ -49,6 +54,14 @@ CREATE TABLE music_album(
 );
 
 -- Games
+CREATE TABLE game(
+  id SERIAL NOT NULL PRIMARY KEY,
+  multiplayer BOOLEAN,
+  last_played_at DATE,
+  publish_date DATE,
+  archived BOOLEAN,
+  author_id INTEGER REFERENCES author (id) 
+)
 
 
 
