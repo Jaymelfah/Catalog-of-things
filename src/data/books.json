@@ -1,0 +1,54 @@
+[
+  {
+    "publish_date" : "1988/12/04",
+    "cover_state" : "bad",
+    "publisher" : "Francaise Intl",
+    "id" : "2fd84916dcd440",
+    "label" : {
+      "title" : "Animal Farm",
+      "color" : "green",
+      "id" : {
+        "id" : "dbed352cd15299"
+      }
+    },
+    "author" : {
+      "first_name" : "George",
+      "last_name" : "Orwell",
+      "id" : "d00218e957080f"
+    }
+  },
+  {
+    "publish_date" : "1990/8/20",
+    "cover_state" : "good",
+    "publisher" : "Macmillan",
+    "id" : "4d8709cb73d126",
+    "label" : {
+      "title" : "Silas Mannar",
+      "color" : "White",
+      "id" : {
+        "id" : "6aff45b739ec27"
+      }
+    },
+    "author" : {
+      "first_name" : "Rowan",
+      "last_name" : "Atkinson",
+      "id" : "6e569d2a059e4f"
+    }
+  },
+  {
+    "publish_date" : "2020-1-1",
+    "cover_state" : "good",
+    "publisher" : "emegua",
+    "id" : "b6148edf8255ca",
+    "label" : {
+      "title" : "Zamra",
+      "color" : "red",
+      "id" : "cb8707ef3dda51"
+    },
+    "author" : {
+      "first_name" : "Yismake",
+      "last_name" : "Worku",
+      "id" : "ef637424a866cb"
+    }
+  }
+]
