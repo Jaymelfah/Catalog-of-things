@@ -32,6 +32,6 @@ class Item
   private
 
   def can_be_archived?
-    Date.today.year - Date.parse(@publish_date).year > 10
+    (Date.today.year - Date.parse(@publish_date).year) > 10
   end
 end
